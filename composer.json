@@ -1,0 +1,23 @@
+{
+    "name": "peterkahl/country-code",
+    "type": "library",
+    "description": "Methods for working with 2-character country codes.",
+    "keywords": ["country-codes", "country-names", "country-code-validator"],
+    "homepage": "https://github.com/peterkahl/CountryCode",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Peter Kahl",
+            "homepage": "https://www.cidrcalculator.com/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "peterkahl\\CountryCode\\": "src/"
+        }
+    }
+}
