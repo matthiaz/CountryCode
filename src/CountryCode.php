@@ -3,7 +3,7 @@
  * Country Code
  * Methods for working with 2-character country codes.
  *
- * @version    2018-08-14 20:50:00 GMT
+ * @version    2018-10-29 15:26:00 UTC
  * @author     Peter Kahl <https://github.com/peterkahl>
  * @copyright  2018 Peter Kahl
  * @license    Apache License, Version 2.0
@@ -51,7 +51,7 @@ class CountryCode {
       throw new Exception('Country code cannot be empty AND length must be 2');
     }
     $country = strtoupper($country);
-    if (!rray_key_exists($country, self::$world)) {
+    if (!array_key_exists($country, self::$world)) {
       throw new Exception('Country code is invalid');
     }
     return self::$world($country);
