@@ -44,14 +44,14 @@ class CountryCode {
    * @param  string ... 2-character country code
    * @return string
    * @throws \Exception
-   * CAUTION: Names contain diacritics (multibyte strins).
+   * CAUTION: Names contain diacritics (multibyte strings).
    */
   public static function getName($country = '') {
     if (empty($country) || strlen($country) !== 2) {
       throw new Exception('Country code cannot be empty AND length must be 2');
     }
     $country = strtoupper($country);
-    if (!array_key_exists($country, self::$world)) {
+    if (!isset($country[self::$world])) {
       throw new Exception('Country code is invalid');
     }
     return self::$world($country);
